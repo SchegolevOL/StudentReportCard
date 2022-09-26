@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 namespace StudentReportCard.App
 {
     [Table ("tab_student_report")]
-    public class StudetReport
+    public class StudentReport
     {
         [Column ("id")]
-        [Required]
         public int Id { get; set; }
         [Column("first_name")]
         [Required]
@@ -29,5 +28,7 @@ namespace StudentReportCard.App
         [Column("assessment")]
         [Required]
         public int Assessment { get; set; }
+
+
     }
 }

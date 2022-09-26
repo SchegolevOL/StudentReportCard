@@ -8,16 +8,14 @@ using System.Threading.Tasks;
 
 namespace StudentReportCard.App
 {
-    public class DataBase : DbContext
+    public class DB : DbContext
     {
-        protected DataBase()
+        public DbSet<StudentReport> TableStudetReports=>Set<StudentReport>();
+        
+        public DB()
         {
             Database.EnsureCreated();
         }
-
-        public DbSet<StudetReport> TableStudetReports=>Set<StudetReport>();
-       
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(DbConfig.ImportFromJson("db.json").ToString());

@@ -1,6 +1,6 @@
 {
   "Server": "localhost",
-  "DataBase": "persons_database",
+  "DataBase": "student_report_database",
   "User": "user",
   "Password": "6502468670"
 }
